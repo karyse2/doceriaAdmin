@@ -1,16 +1,7 @@
-angular.module('adm',['ngRoute'])
+angular.module('adm',['ui.router', 'ngMaterial'])
 
-.config(function($routeProvider){
 
-    $routeProvider.when('/',{
-        templateUrl: 'views/login.html',
-        controller:'loginCtrl'
-    }).when('/home', {
-        templateUrl:'views/home.html',
-        controller:'homeCtrl'
-    })
-    // redireciona o usuario para a tela / quando ele digitar uma url inválida após a /
-    $routeProvider.otherwise({redirectTo:'/'});
+.config(function ($stateProvider, $urlRouterProvider) {
 
-    
+
 });

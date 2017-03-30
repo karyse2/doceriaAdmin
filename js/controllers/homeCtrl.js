@@ -2,15 +2,16 @@ angular.module('adm')
 
     .controller('homeCtrl', function($scope) {
 
-        $scope.openNav = function() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
+        //Função abre menu
+        $scope.abrirMenu = function() {
+            document.getElementById("mySidenav").style.width = "265px";
+            document.getElementById("main").style.marginLeft = "220px";
         }
 
-        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 
-        $scope.closeNav = function () {
-            document.getElementById("mySidenav").style.right = "";
-            document.getElementById("main").style.right = "";
+        //Função fecha menu
+        $scope.fecharMenu = function() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
         }
     });
