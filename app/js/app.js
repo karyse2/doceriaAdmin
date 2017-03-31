@@ -1,28 +1,50 @@
 angular.module('adm', ['ui.router', 'ngMaterial'])
 
-    .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
-
-        // Each tab has its own nav history stack:
-
-        // if none of the above states are matched, use this as the fallback
-
-        $stateProvider
-            .state('app', {
+            $stateProvider
+            .state('main', {
                 abstract: true,
                 url: '',
-                templateUrl: 'views/home.html',
-                controller: 'homeCtrl'
+                templateUrl: 'views/main.html',
+                controller: 'mainCtrl'
             })
-            .state('app.login', {
+            .state('main.login', {
                 url: '/login',
                 templateUrl: 'views/login.html',
                 controller: 'loginCtrl',
             })
-            .state('app.home', {
-                url: '/home',
-                templateUrl: 'views/home.html',
-                controller: 'homeCtrl',
+
+            .state('main.meusPedidos', {
+                url: '/meusPedidos',
+                templateUrl: 'views/meusPedidos.html',
+                controller: 'meusPedidosCtrl',
             })
-        $urlRouterProvider.otherwise('/login');
+            .state('main.meusOrcamentos', {
+                url: '/meusOrcamentos',
+                templateUrl: 'views/meusOrcamentos.html',
+                controller: 'meusOrcamentosCtrl',
+            })
+            .state('main.montarCardapio', {
+                url: '/montarCardapio',
+                templateUrl: 'views/montarCardapio.html',
+                controller: 'montarCardapioCtrl',
+            })
+            .state('main.financeiro', {
+                url: '/financeiro',
+                templateUrl: 'views/financeiro.html',
+                controller: 'financeiroCtrl',
+            })
+            .state('main.eventos', {
+                url: '/eventos',
+                templateUrl: 'views/eventos.html',
+                controller: 'eventosCtrl',
+            })
+            .state('main.relatorios', {
+                url: '/relatorios',
+                templateUrl: 'views/relatorios.html',
+                controller: 'relatoriosCtrl',
+            })
+
+            $urlRouterProvider.otherwise('/login');
     });

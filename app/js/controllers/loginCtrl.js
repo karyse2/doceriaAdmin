@@ -1,14 +1,4 @@
-angular.module("adm").controller('loginCtrl', function($scope, $http, $state, $mdDialog, $mdMedia) {
-    // $scope.auth = function(login) {
-    //   $http.post("http://localhost:8000/auth/login", login).then(function(response) {
-    //     console.log("sucesso");
-    //     console.log('reponse');
-    //   },function(response) {
-    //     console.log("error");
-    //     console.log(response);
-    //   });
-    // }
-
+angular.module("adm").controller('loginCtrl', function($scope, $http, $state, $mdDialog,$mdMedia) {
 
     // {objeto}
     $scope.login = {
@@ -24,7 +14,7 @@ angular.module("adm").controller('loginCtrl', function($scope, $http, $state, $m
     $scope.acessarSistema = function(usuarioInformado) {
         if (usuarioInformado.usuario == usuarioPadrao.usuario && usuarioInformado.senha == usuarioPadrao.senha) {
             console.log('Login efetuado com sucesso');
-                $state.go('app.home');
+                $state.go('main.meusPedidos');
 
         } else {
             console.log('Login Invalido');

@@ -1,6 +1,6 @@
 angular.module('adm')
 
-.controller('meusPedidosCtrl', function($scope) {
+    .controller('meusPedidosCtrl', function($scope) {
+    
 
-
-});
+    });

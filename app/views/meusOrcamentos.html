@@ -1,12 +1,10 @@
 <div id="main">
   <span style="font-size:15px;" ng-click="abrirMenu()">&#9776; </span>
-
   <div class="content-wrapper" style="margin-left:30px" >
       <section class="content-header" >
           <h1>
             Bem Vindo
             <small>à página administrativa da sua empresa!</small>
-            <h6>Meus Pedidos</h6>
           </h1>
           <ol class="breadcrumb"></ol>
         </section>
@@ -25,7 +23,7 @@
            <nav class="navbar navbar-static-top ">
              <!-- Sidebar toggle button-->
          </header>
-            <a href="javascript:void(0)" class="closebtn" ng-click="fecharMenu()"></a>
+            <a href="javascript:void(0)" class="closebtn" ng-click="fecharMenu()">&times;</a>
             <section class="sidebar" ng-init="abrirMenu()">
               <ul class="sidebar-menu">
                 <li class="active treeview">
@@ -79,9 +77,7 @@
               <div class="nav-tabs-custom">
                 <div class="tab-content">
                   <div class="chart tab-pane active"  style="position: relative; height: 800px;">
-                    <div class="col-sm-3">
-                      
-
+                      <h3>Meus orçamentos</h3>
                   </div>
                   <div class="chart tab-pane"  style="position: relative; height: 100%;">
 
