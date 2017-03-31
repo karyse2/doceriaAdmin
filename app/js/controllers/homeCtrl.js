@@ -1,6 +1,6 @@
 angular.module('adm')
 
-    .controller('homeCtrl', function($scope) {
+    .controller('homeCtrl', function($scope, $state) {
 
         //Função abre menu
         $scope.abrirMenu = function() {

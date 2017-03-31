@@ -1,6 +1,4 @@
-
-<body class="hold-transition login-page">
-<div class="login-box">
+<div class="login-box" hide-nav-bar="true" >
   <div class="login-logo" >
     <a href="../../index2.html"><b>Sistema</b> Admin Docerias</a>
   </div>
@@ -23,16 +21,10 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-click="acessarSistema(login)  ">Logar</button>
+          <button ng-hide-animate="" ui-sref="app.home" class="btn btn-primary btn-block btn-flat" ng-click="acessarSistema(login) ">Logar</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
   </div>
-  <!-- /.login-box-body -->
 </div>
-<!-- /.login-box -->
-
-
-
-</body>
