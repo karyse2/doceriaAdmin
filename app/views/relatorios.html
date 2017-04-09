@@ -1,10 +1,19 @@
 <div id="main">
-  <span style="font-size:15px;" ng-click="abrirMenu()">&#9776; </span>
-  <div class="content-wrapper" style="margin-left:30px" >
+    <div class="">
+      <md-button
+        class="md-fab md-primary md-fab-top-right"
+        ng-click="ctrl.showMenu($event, ctrl.more)"
+        style="margin-left:95%;">
+        <md-icon class="glyphicon glyphicon-user"></md-icon>
+      </md-button>
+        <span style="font-size:20px;color:white;" ng-click="abrirMenu()">&#9776; </span>
+    </div>
+  <div class="content-wrapper" style="margin-left:30px;" >
       <section class="content-header" >
           <h1>
             Bem Vindo
             <small>à página administrativa da sua empresa!</small>
+            <h6>Relatórios</h6>
           </h1>
           <ol class="breadcrumb"></ol>
         </section>
@@ -12,23 +21,23 @@
           <aside class="main-sidebar">
             <header class="main-header" >
            <!-- Logo -->
-           <a href="index2.html" class="logo">
+           <div class="logo" style="color:#fff">
              <!-- mini logo for sidebar mini 50x50 pixels -->
              <span class="logo-mini"><b>A</b>LT</span>
              <!-- logo for regular state and mobile devices -->
              <span class="logo-lg"><b>Admin</b> Docerias</span>
 
-           </a>
+           </div>
            <!-- Header Navbar: style can be found in header.less -->
            <nav class="navbar navbar-static-top ">
              <!-- Sidebar toggle button-->
          </header>
-            <a href="javascript:void(0)" class="closebtn" ng-click="fecharMenu()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" ng-click="fecharMenu()"></a>
             <section class="sidebar" ng-init="abrirMenu()">
               <ul class="sidebar-menu">
                 <li class="active treeview">
                   <a ui-sref="main.meusPedidos">
-                    <i class="fa fa-dashboard"></i> <span>Meus Pedidos</span>
+                    <i class="glyphicon glyphicon-list-alt"></i> <span>Meus Pedidos</span>
                     <span class="pull-right-container">
                     </span>
                   </a>
@@ -36,7 +45,7 @@
 
                 <li class="active treeview">
                   <a ui-sref="main.meusOrcamentos">
-                    <i class="fa fa-dashboard"></i> <span>Meus orçamentos</span>
+                    <i class="fa fa-calculator"></i> <span>Meus orçamentos</span>
                     <span class="pull-right-container">
                     </span>
                   </a>
@@ -50,7 +59,7 @@
                 </li>
                 <li class="active treeview">
                   <a ui-sref="main.financeiro">
-                    <i class="fa fa-table"></i> <span>Financeiro</span>
+                    <i class="glyphicon glyphicon-usd"></i> <span>Financeiro</span>
                     <span class="pull-right-container">
                     </span>
                   </a>
@@ -63,7 +72,7 @@
                 </li>
                 <li class="active treeview">
                   <a ui-sref="main.relatorios">
-                    <i class="fa fa-envelope"></i>
+                    <i class="glyphicon glyphicon-print"></i>
                     <span>Relatórios</span>
                   </a>
                 </li>
@@ -77,7 +86,9 @@
               <div class="nav-tabs-custom">
                 <div class="tab-content">
                   <div class="chart tab-pane active"  style="position: relative; height: 800px;">
-                      <h3>Relatórios</h3>
+                    <div class="col-sm-3">
+
+
                   </div>
                   <div class="chart tab-pane"  style="position: relative; height: 100%;">
 

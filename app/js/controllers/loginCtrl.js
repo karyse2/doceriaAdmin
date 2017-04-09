@@ -18,7 +18,8 @@ angular.module("adm").controller('loginCtrl', function($scope, $http, $state, $m
 
         } else {
             console.log('Login Invalido');
-            showAlert();
+            
+
         }
     }
 });

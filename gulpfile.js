@@ -1,25 +1,29 @@
-var gulp = require('gulp'),
-    connect = require('gulp-connect'),
-    historyApiFallback = require('connect-history-api-fallback');
+/**
+ *  Welcome to your gulpfile!
+ *  The gulp tasks are split into several files in the gulp directory
+ *  because putting it all here was too long
+ */
 
-    gulp.task('server', function() {
-        connect.server({
-            root: './app',
-            port: 3000,
-            livereload: true,
-            middleware: function(connect, opt) {
-                return [historyApiFallback({})];
-            }
-        });
-    });
+'use strict';
 
-gulp.task('html',function() {
-    gulp.src('./app/*.html')
-    .pipe(connect.reload());
+var fs = require('fs');
+var gulp = require('gulp');
+
+/**
+ *  This will load all js or coffee files in the gulp directory
+ *  in order to load all gulp tasks
+ */
+fs.readdirSync('./gulp').filter(function(file) {
+  return (/\.(js|coffee)$/i).test(file);
+}).map(function(file) {
+  require('./gulp/' + file);
 });
 
-gulp.task('watch', function() {
-    gulp.watch(['./app/*.html'],['html']);
-});
 
-gulp.task('default',['server','watch']);
+/**
+ *  Default task clean temporaries directories and launch the
+ *  main optimization build task
+ */
+gulp.task('default', ['clean'], function () {
+  gulp.start('build');
+});
